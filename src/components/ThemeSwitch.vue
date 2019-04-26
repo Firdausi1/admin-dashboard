@@ -2,11 +2,14 @@
   <div
     @click="toggleDarkMode"
     class="toggle"
-    :class="{'light-toggle': !isDarkMode, 'dark-toggle': isDarkMode}"
+    :class="{ 'light-toggle': !isDarkMode, 'dark-toggle': isDarkMode }"
   >
-    <div class="toggle-switch" :class="{'toggle-left': !isDarkMode, 'toggle-right': isDarkMode}">
-      <img v-show="!isDarkMode" src="@/assets/sun.svg" alt>
-      <img v-show="isDarkMode" src="@/assets/moon.svg" alt>
+    <div
+      class="toggle-switch"
+      :class="{ 'toggle-left': !isDarkMode, 'toggle-right': isDarkMode }"
+    >
+      <img v-show="!isDarkMode" src="@/assets/sun.svg" alt />
+      <img v-show="isDarkMode" src="@/assets/moon.svg" alt />
     </div>
   </div>
 </template>

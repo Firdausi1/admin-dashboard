@@ -1,7 +1,10 @@
 <template>
-  <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutRight">
+  <transition
+    enter-active-class="animated fadeInDown"
+    leave-active-class="animated fadeOutRight"
+  >
     <div v-show="show" class="bubble">
-      <div class="message">{{text}}</div>
+      <div class="message">{{ text }}</div>
     </div>
   </transition>
 </template>
@@ -21,7 +24,9 @@ export default {
     }, 3000);
   },
   props: {
-    text: ""
+    text: {
+      required: false
+    }
   }
 };
 </script>

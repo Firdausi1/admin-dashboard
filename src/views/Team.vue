@@ -1,74 +1,103 @@
 <template>
   <div class="container">
-    <ThemeSwitch/>
-    <h2 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Team</h2>
+    <ThemeSwitch />
+    <h2 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+      Team
+    </h2>
     <div class="cards">
       <transition appear appear-active-class="animated flipInX">
-        <a class="card card-1" :class="{'light-card' : !isDarkMode, 'dark-card' : isDarkMode}">
+        <a
+          class="card card-1"
+          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
+        >
           <img
             src="@/assets/slack.png"
             alt
             class="card-header"
-            :class="{'light-header' : !isDarkMode, 'dark-header' : isDarkMode}"
-          >
-          <h3 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Slack</h3>
-          <p
-            :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-          >Messaging App for all team communication</p>
+            :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
+          />
+          <h3 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Slack
+          </h3>
+          <p :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Messaging App for all team communication
+          </p>
         </a>
       </transition>
       <transition appear appear-active-class="animated flipInX">
-        <a class="card card-2" :class="{'light-card' : !isDarkMode, 'dark-card' : isDarkMode}">
+        <a
+          class="card card-2"
+          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
+        >
           <img
             src="@/assets/notion.png"
             alt
             class="card-header"
-            :class="{'light-header' : !isDarkMode, 'dark-header' : isDarkMode}"
-          >
-          <h3 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Notion</h3>
-          <p :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">All in one workspace</p>
+            :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
+          />
+          <h3 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Notion
+          </h3>
+          <p :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            All in one workspace
+          </p>
         </a>
       </transition>
       <transition appear appear-active-class="animated flipInX">
-        <a class="card card-3" :class="{'light-card' : !isDarkMode, 'dark-card' : isDarkMode}">
+        <a
+          class="card card-3"
+          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
+        >
           <img
             src="@/assets/figma.png"
             alt
             class="card-header"
-            :class="{'light-header' : !isDarkMode, 'dark-header' : isDarkMode}"
-          >
-          <h3 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Figma</h3>
-          <p
-            :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-          >Collaborative design tool</p>
+            :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
+          />
+          <h3 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Figma
+          </h3>
+          <p :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Collaborative design tool
+          </p>
         </a>
       </transition>
       <transition appear appear-active-class="animated flipInX">
-        <a class="card card-4" :class="{'light-card' : !isDarkMode, 'dark-card' : isDarkMode}">
+        <a
+          class="card card-4"
+          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
+        >
           <img
             src="@/assets/contentful.png"
             alt
             class="card-header"
-            :class="{'light-header' : !isDarkMode, 'dark-header' : isDarkMode}"
-          >
-          <h3 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Contentful</h3>
-          <p
-            :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-          >Content management system</p>
+            :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
+          />
+          <h3 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Contentful
+          </h3>
+          <p :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Content management system
+          </p>
         </a>
       </transition>
       <transition appear appear-active-class="animated flipInX">
-        <a class="card card-5" :class="{'light-card' : !isDarkMode, 'dark-card' : isDarkMode}">
+        <a
+          class="card card-5"
+          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
+        >
           <img
             src="@/assets/dropbox.png"
             alt
             class="card-header"
-            :class="{'light-header' : !isDarkMode, 'dark-header' : isDarkMode}"
-          >
-          <h3 :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">Dropbox</h3>
-          <p
-            :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-          >Storage space in the cloud</p>
+            :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
+          />
+          <h3 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Dropbox
+          </h3>
+          <p :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
+            Storage space in the cloud
+          </p>
         </a>
       </transition>
     </div>

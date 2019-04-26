@@ -3,9 +3,9 @@
     <div
       class="request"
       v-show="show"
-      :class="{'light-request' : isDarkMode, 'dark-request' : !isDarkMode}"
+      :class="{ 'light-request': isDarkMode, 'dark-request': !isDarkMode }"
     >
-      Don't have a Design+Code HQ account?
+      Don't have a Melon HQ account?
       <router-link to="/request">Request an account</router-link>
     </div>
   </transition>
