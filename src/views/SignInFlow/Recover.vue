@@ -7,7 +7,7 @@
     <div class="login">
       <img src="@/assets/Melon.svg" height="60px" v-show="isDarkMode" />
       <img src="@/assets/Melon-dark.svg" height="60px" v-show="!isDarkMode" />
-      <h4 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
+      <h4 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">
         Recover Account
       </h4>
       <form @submit.prevent="onSubmit">
@@ -94,5 +94,6 @@ export default {
 
 .login {
   width: 400px;
+  text-align: center;
 }
 </style>
