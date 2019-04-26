@@ -23,7 +23,7 @@ export default {
   components: {
     Header
   }
-};
+},
 methods: {
   toggleDays(){
     this.$refs.days.style.color = "white";

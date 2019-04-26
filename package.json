@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "animate.css": "^3.7.0",
+        "apexcharts": "^3.6.8",
         "core-js": "^2.6.5",
         "eslint-loader": "^2.1.2",
         "gotrue-js": "^0.9.25",
