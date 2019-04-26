@@ -11,13 +11,13 @@ sans-serif;
     color: $color;
 }
 
-@mixin heading-2 {
+@mixin heading-2($color:$white) {
     font-size: 60px;
     line-height: 86px;
     font-weight: bold;
 }
 
-@mixin heading-3 {
+@mixin heading-3($color:$white) {
     font-size: 30px;
     line-height: 43px;
     font-weight: bold;

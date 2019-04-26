@@ -24,6 +24,7 @@ export default {
 
 body {
   background: $dark-blue;
+  margin: 0;
 }
 
 h1 {

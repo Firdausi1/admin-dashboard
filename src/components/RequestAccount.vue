@@ -6,7 +6,7 @@
       :class="{'light-request' : isDarkMode, 'dark-request' : !isDarkMode}"
     >
       Don't have a Design+Code HQ account?
-      <router-link to="/recover">Request an account</router-link>
+      <router-link to="/request">Request an account</router-link>
     </div>
   </transition>
 </template>
