@@ -22,8 +22,7 @@ export default {
   name: "home",
   components: {
     Header
-  }
-},
+  },
 methods: {
   toggleDays(){
     this.$refs.days.style.color = "white";
@@ -72,7 +71,7 @@ methods: {
     this.$refs.days.style.borderRadius = "none";
 
   }
-}
+}}
 </script>
 
 
