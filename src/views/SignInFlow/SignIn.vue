@@ -74,9 +74,7 @@ export default {
       auth
         .login(email, password, true)
         .then(response => {
-          console.log(response);
-          
-          this.$router.push("/");
+          this.$router.replace("/");
         })
         .catch(error => {
           alert("error" + error);

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header />
+    <Header/>
     <div class="container">
       <div class="spread">
         <h1>Traffic Overview</h1>
@@ -37,31 +37,46 @@ export default {
       this.$refs.months.style.background = "none";
       this.$refs.months.style.borderRadius = "none";
     },
-    toggleWeeks() {
-      this.$refs.weeks.style.color = "white";
-      this.$refs.weeks.style.background = "#56ccf2";
-      this.$refs.weeks.style.borderRadius = "4px";
+    methods: {
+      toggleDays() {
+        this.$refs.days.style.color = "white";
+        this.$refs.days.style.background = "#56ccf2";
+        this.$refs.days.style.borderRadius = "4px";
 
-      this.$refs.days.style.color = "#5b6175";
-      this.$refs.days.style.background = "none";
-      this.$refs.days.style.borderRadius = "none";
+        this.$refs.weeks.style.color = "#5c6175";
+        this.$refs.weeks.style.background = "none";
+        this.$refs.weeks.style.borderRadius = "none";
 
-      this.$refs.months.style.color = "#5b6175";
-      this.$refs.months.style.background = "none";
-      this.$refs.months.style.borderRadius = "none";
-    },
-    toggleMonths() {
-      this.$refs.months.style.color = "white";
-      this.$refs.months.style.background = "#56ccf2";
-      this.$refs.months.style.borderRadius = "4px";
+        this.$refs.months.style.color = "#5c6175";
+        this.$refs.months.style.background = "none";
+        this.$refs.months.style.borderRadius = "none";
+      },
+      toggleWeeks() {
+        this.$refs.weeks.style.color = "white";
+        this.$refs.weeks.style.background = "#56ccf2";
+        this.$refs.weeks.style.borderRadius = "4px";
 
-      this.$refs.weeks.style.color = "#5b6175";
-      this.$refs.weeks.style.background = "none";
-      this.$refs.weeks.style.borderRadius = "none";
+        this.$refs.days.style.color = "#5b6175";
+        this.$refs.days.style.background = "none";
+        this.$refs.days.style.borderRadius = "none";
 
-      this.$refs.days.style.color = "#5b6175";
-      this.$refs.days.style.background = "none";
-      this.$refs.days.style.borderRadius = "none";
+        this.$refs.months.style.color = "#5b6175";
+        this.$refs.months.style.background = "none";
+        this.$refs.months.style.borderRadius = "none";
+      },
+      toggleMonths() {
+        this.$refs.months.style.color = "white";
+        this.$refs.months.style.background = "#56ccf2";
+        this.$refs.months.style.borderRadius = "4px";
+
+        this.$refs.weeks.style.color = "#5b6175";
+        this.$refs.weeks.style.background = "none";
+        this.$refs.weeks.style.borderRadius = "none";
+
+        this.$refs.days.style.color = "#5b6175";
+        this.$refs.days.style.background = "none";
+        this.$refs.days.style.borderRadius = "none";
+      }
     }
   }
 };
