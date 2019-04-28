@@ -2,17 +2,24 @@
   <div>
     <div id="nav">
       <div class="nav-1">
-      <img src="@/assets/DCHQ-small.svg">
-      <router-link to="/" :class="{'light-nav' : !isDarkMode, 'dark-nav' : isDarkMode}">Home</router-link>
-      <router-link to="/manage" :class="{'light-nav' : !isDarkMode, 'dark-nav' : isDarkMode}">Manage Users</router-link>
-      <router-link to="/Team" :class="{'light-nav' : !isDarkMode, 'dark-nav' : isDarkMode}">Team</router-link>
+        <img src="@/assets/Melon.svg">
+        <router-link to="/" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">Home</router-link>
+        <router-link
+          to="/manage"
+          :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
+        >Manage Users</router-link>
+        <router-link to="/Team" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">Team</router-link>
       </div>
-      <a @click="onClick">logout <img src ="@/assets/logout.svg"></a>
+      <a @click="onClick">
+        logout
+        <img src="@/assets/logout.svg">
+      </a>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 import { auth } from "@/main.js";
 export default {
   name: "Header",
@@ -47,11 +54,11 @@ export default {
   padding: 30px;
   display: flex;
   justify-content: space-between;
-align-items: center;
-background: $super-dark-blue;
-box-sizing: border-box;
-width: 100%;
-padding: 15px 15%;
+  align-items: center;
+  background: $super-dark-blue;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 15%;
   a {
     font-weight: bold;
     color: $dark-grey;
@@ -64,18 +71,17 @@ padding: 15px 15%;
   }
 }
 
-.nav-1{
+.nav-1 {
   display: flex;
   align-items: center;
 
-  a{
+  a {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 
-img{
+img {
   margin-right: 20px;
 }
-
 </style>
