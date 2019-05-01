@@ -12,12 +12,13 @@ netlifyIdentityWidget.init();
 
 //Initialize gotrue.js for netlify
 export const auth = new Gotrue({
-  APIUrl: "https://firdausi-vue.netlify.com/.netlify/identity",
-  setCookie: true
+    APIUrl: "https://firdausi-vue.netlify.com/.netlify/identity",
+    setCookie: true
 });
 
+/* eslint-disable no-new */
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount("#app");

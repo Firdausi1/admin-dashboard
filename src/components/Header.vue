@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="nav">
+    <div id="nav" :class="{'nav-light' : !isDarkMode , 'nav-dark' : isDarkMode}">
       <div class="nav-1">
         <img src="@/assets/Melon.svg">
         <router-link to="/" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">Home</router-link>
@@ -9,6 +9,10 @@
           :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
         >Manage Users</router-link>
         <router-link to="/Team" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">Team</router-link>
+        <router-link
+          to="/Movies"
+          :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
+        >Movies</router-link>
       </div>
       <a @click="onClick">
         logout
@@ -50,12 +54,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-light {
+  background: $white;
+}
+
+.nav-dark {
+  background: $super-dark-blue;
+}
+
 #nav {
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $super-dark-blue;
   box-sizing: border-box;
   width: 100%;
   padding: 15px 15%;

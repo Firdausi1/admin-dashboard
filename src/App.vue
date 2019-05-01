@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div id="app" :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}">
+    <router-view/>
   </div>
 </template>
 
@@ -9,6 +9,11 @@ import "animate.css";
 
 export default {
   name: "App",
+  computed: {
+    isDarkMode() {
+      return this.$store.getters.isDarkMode;
+    }
+  },
   mounted() {
     const isDarkMode = this.$store.getters.isDarkMode;
     document.body.style.background = isDarkMode ? "#212c4f" : "#f0f3f5";
@@ -24,6 +29,12 @@ export default {
 body {
   background: $dark-blue;
   margin: 0;
+  padding: 0;
+}
+
+line,
+text {
+  opacity: 0.2;
 }
 
 h1 {
@@ -55,7 +66,6 @@ p {
 h4 {
   line-height: 34px;
   font-size: 24px;
-  text-align: center;
 
   color: #ffffff;
 }
@@ -68,7 +78,6 @@ input {
   height: 60px;
   width: 100%;
   font-size: 20px;
-  color: #ffffff;
   padding-left: 20px;
   margin-top: 20px;
 
@@ -107,10 +116,20 @@ a {
 
 .light-background {
   background-color: $light-grey;
+
+  line,
+  text {
+    stroke: $black;
+  }
 }
 
 .dark-background {
   background-color: $dark-blue;
+
+  line,
+  text {
+    stroke: $light-grey;
+  }
 }
 
 .light-text {
@@ -124,7 +143,7 @@ a {
 .light-field {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
-
+  color: $black;
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -133,9 +152,19 @@ a {
 .dark-field {
   background: rgba(198, 208, 235, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
-
+  color: $white;
   &::placeholder {
     color: rgba(255, 255, 255, 0.3);
   }
+}
+
+.dark-box {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 </style>
