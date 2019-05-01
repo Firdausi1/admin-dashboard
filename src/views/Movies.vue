@@ -195,18 +195,21 @@
           >
         </router-link>
       </div>
+      <ThemeSwitch/>
     </div>
   </div>
 </template>
 
 <script>
+import ThemeSwitch from "../components/ThemeSwitch.vue";
 import Header from "@/components/Header.vue";
 import { mapState } from "vuex";
 
 export default {
   name: "Movies",
   components: {
-    Header
+    Header,
+    ThemeSwitch
   },
   data() {
     return {
@@ -288,6 +291,7 @@ export default {
   & img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   &:hover {
@@ -298,7 +302,7 @@ export default {
 .movie-description {
   box-sizing: border-box;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   margin: 0;
 
   & p {
