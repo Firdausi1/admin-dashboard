@@ -156,12 +156,12 @@
             </a>
           </div>
         </div>
-        <div class="movie" v-if="show">
+        <div class="movie" v-for="movie in movies" :key="movie">
           <div
             class="movie-title"
             :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
           >
-            <h3 v-for="movie in movies" :key="movie">
+            <h3>
               <span>{{movie.title}}</span>
             </h3>
           </div>
@@ -170,11 +170,7 @@
             class="movie-description"
             :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
           >
-            <p
-              v-for="movie in movies"
-              :key="movie"
-              :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-            >{{movie.desc}}</p>
+            <p :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">{{movie.desc}}</p>
           </div>
           <div
             class="icons"
@@ -210,7 +206,10 @@ export default {
   },
   data() {
     return {
-      show: false
+      movie: {
+        title: "",
+        desc: ""
+      }
     };
   },
   computed: {

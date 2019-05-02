@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
-export {
-    default as Add
-}
-from "./views/Add.vue";
-export {
-    default as Movies
-}
-from "./views/Movies.vue";
+// export {
+//     default as Add
+// }
+// from "./views/Add.vue";
+// export {
+//     default as Movies
+// }
+// from "./views/Movies.vue";
 
 Vue.use(Vuex);
 

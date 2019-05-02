@@ -1,5 +1,6 @@
 <template>
   <div class="add">
+    <Header/>
     <div class="container">
       <form @submit.prevent="addNewMovie">
         <div class="uploadImage">
@@ -43,6 +44,7 @@
 
 <script>
 import { mapActions } from "vuex";
+import Header from "@/components/Header.vue";
 
 export default {
   name: "Add",
@@ -52,6 +54,9 @@ export default {
     };
   },
   components: {
+    Header
+  },
+  computed: {
     isDarkMode() {
       return this.$store.getters.isDarkMode;
     }
@@ -63,7 +68,6 @@ export default {
       this.add_Movie(this.newMovie).then(() => {
         this.newMovie = {};
       });
-      show: true;
     },
     back() {
       this.$router.replace("/movies");
