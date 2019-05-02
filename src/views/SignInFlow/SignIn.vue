@@ -44,6 +44,7 @@ import RequestAccount from "@/components/RequestAccount.vue";
 import ThemeSwitch from "@/components/ThemeSwitch.vue";
 import Notification from "@/components/Notification.vue";
 import { auth } from "@/main.js";
+import * as netlifyIdentityWidget from "netlify-identity-widget";
 
 export default {
   name: "SignIn",
@@ -67,13 +68,13 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log('yo');
-      
       const email = this.email;
       const password = this.password;
       auth
         .login(email, password, true)
         .then(response => {
+          console.log(response);
+          
           this.$router.replace("/");
         })
         .catch(error => {

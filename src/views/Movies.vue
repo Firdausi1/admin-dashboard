@@ -5,15 +5,15 @@
       <h2 :class="{ 'light-text': !isDarkMode, 'dark-text': isDarkMode }">Movies</h2>
 
       <div class="movies">
-        <div class="movie">
+        <div v-for="movie in movies" :key="movie['.key']" class="movie">
           <div
             class="movie-title"
             :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
           >
-            <h3 ref="title">Diary of a wimpy kid</h3>
+            <h3 ref="title">{{movie.Title}}</h3>
           </div>
           <div class="movie-poster">
-            <img src="@/assets/movie-poster-4.jpg" ref="image" editable>
+            <img :src="movie.imageUrl" ref="image" editable>
           </div>
           <div
             class="movie-description"
@@ -22,155 +22,7 @@
             <p
               :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
               ref="descripton"
-            >{{"this paragraph contains the description of the movie this paragraph contains the description of the movie" | truncate(300, '...')}}</p>
-          </div>
-          <div
-            class="icons"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
-          </div>
-        </div>
-        <div class="movie">
-          <div
-            class="movie-title"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <h3>Amazing Spiderman</h3>
-          </div>
-          <div class="movie-poster">
-            <img src="@/assets/movie-poster-19.jpg" editable>
-          </div>
-          <div
-            class="movie-description"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <p
-              :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-            >{{"this paragraph contains the description of the movie this paragraph contains the description of the movie" | truncate(300, '...')}}</p>
-          </div>
-          <div
-            class="icons"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
-          </div>
-        </div>
-        <div class="movie">
-          <div
-            class="movie-title"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <h3>Hotel Transylvania</h3>
-          </div>
-          <div class="movie-poster">
-            <img src="@/assets/movie-poster-9.jpg" editable>
-          </div>
-          <div
-            class="movie-description"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <p
-              :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-            >{{"this paragraph contains the description of the movie this paragraph contains the description of the movie" | truncate(300, '...')}}</p>
-          </div>
-          <div
-            class="icons"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
-          </div>
-        </div>
-        <div class="movie">
-          <div
-            class="movie-title"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <h3>The Expendables 2</h3>
-          </div>
-          <div class="movie-poster">
-            <img src="@/assets/movie-poster-32.jpg" editable>
-          </div>
-          <div
-            class="movie-description"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <p
-              :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-            >{{"this paragraph contains the description of the movie this paragraph contains the description of the movie" | truncate(300, '...')}}</p>
-          </div>
-          <div
-            class="icons"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
-          </div>
-        </div>
-        <div class="movie">
-          <div
-            class="movie-title"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <h3>The Possession</h3>
-          </div>
-          <div class="movie-poster">
-            <img src="@/assets/movie-poster-36.jpg" editable>
-          </div>
-          <div
-            class="movie-description"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <p
-              :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}"
-            >{{"this paragraph contains the description of the movie this paragraph contains the description of the movie" | truncate(300, '...')}}</p>
-          </div>
-          <div
-            class="icons"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
-          </div>
-        </div>
-        <div class="movie" v-for="movie in movies" :key="movie">
-          <div
-            class="movie-title"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <h3>
-              <span>{{movie.title}}</span>
-            </h3>
-          </div>
-          <div class="movie-poster"></div>
-          <div
-            class="movie-description"
-            :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
-          >
-            <p :class="{'light-text' : !isDarkMode, 'dark-text' : isDarkMode}">{{movie.desc}}</p>
+            >{{excerpt(movie.Summary)}}</p>
           </div>
           <div
             class="icons"
@@ -191,39 +43,57 @@
           >
         </router-link>
       </div>
+      <ThemeSwitch/>
     </div>
   </div>
 </template>
 
 <script>
+import ThemeSwitch from "../components/ThemeSwitch.vue";
 import Header from "@/components/Header.vue";
+import { db } from '@/firebase';
 import { mapState } from "vuex";
 
 export default {
   name: "Movies",
   components: {
-    Header
+    Header,
+    ThemeSwitch
+  },
+  firebase: {
+    movies: db.ref('Movie Information')
   },
   data() {
     return {
-      movie: {
-        title: "",
-        desc: ""
-      }
+      show: false,
+      movies: []
     };
+  },
+  methods: {
+    excerpt(summary) {
+      if (summary.length <= 100) {
+        return summary;
+      }
+      return summary.substring(1, 100)+'...';
+    }
   },
   computed: {
     isDarkMode() {
       return this.$store.getters.isDarkMode;
     },
-
-    ...mapState(["movies"])
   },
   filters: {
     truncate: function(text, length, suffix) {
       return text.substring(0, length) + suffix;
     }
-  }
+  },
+  // created() {
+  //   this.$bind('todos', db.ref('Movie Information')).then(movies => {
+  //     this.movies === movies
+  //     this.$unbind('movies')
+  //   })
+    
+  // }
 };
 </script>
 
@@ -287,6 +157,7 @@ export default {
   & img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   &:hover {
@@ -297,7 +168,7 @@ export default {
 .movie-description {
   box-sizing: border-box;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   margin: 0;
 
   & p {
