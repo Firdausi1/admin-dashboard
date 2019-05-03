@@ -13,7 +13,9 @@
             <h3 ref="title">{{movie.Title}}</h3>
           </div>
           <div class="movie-poster">
+            <router-link to="/editMovie" >
             <img :src="movie.imageUrl" ref="image" editable>
+            </router-link>
           </div>
           <div
             class="movie-description"
@@ -31,12 +33,14 @@
             <a>
               <img src="@/assets/view.svg">
             </a>
+            <router-link to="/editMovie">
             <a>
               <img src="@/assets/edit.svg">
             </a>
+            </router-link>
           </div>
         </div>
-        <router-link to="/movies/add" class="add movie">
+        <router-link to="/addMovie" class="add movie">
           <img
             src="@/assets/add.svg"
             :class="{'light-icon' : !isDarkMode, 'dark-icon' : isDarkMode}"
@@ -51,7 +55,7 @@
 <script>
 import ThemeSwitch from "../components/ThemeSwitch.vue";
 import Header from "@/components/Header.vue";
-import { db } from '@/firebase';
+import { db } from "@/firebase";
 import { mapState } from "vuex";
 
 export default {
@@ -61,11 +65,10 @@ export default {
     ThemeSwitch
   },
   firebase: {
-    movies: db.ref('Movie Information')
+    movies: db.ref("Movie Information")
   },
   data() {
     return {
-      show: false,
       movies: []
     };
   },
@@ -74,25 +77,20 @@ export default {
       if (summary.length <= 100) {
         return summary;
       }
-      return summary.substring(1, 100)+'...';
+      return summary.substring(1, 100) + "...";
     }
   },
   computed: {
     isDarkMode() {
       return this.$store.getters.isDarkMode;
-    },
-  },
-  filters: {
-    truncate: function(text, length, suffix) {
-      return text.substring(0, length) + suffix;
     }
-  },
+  }
   // created() {
   //   this.$bind('todos', db.ref('Movie Information')).then(movies => {
   //     this.movies === movies
   //     this.$unbind('movies')
   //   })
-    
+
   // }
 };
 </script>
