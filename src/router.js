@@ -8,6 +8,7 @@ import Manage from "./views/Manage.vue";
 import Movies from "./views/Movies.vue";
 import AddMovie from "./views/AddMovie.vue";
 import editMovie from "./views/editMovie.vue";
+import viewMovie from "./views/viewMovie.vue";
 import View from "./views/View.vue";
 import SignIn from "./views/SignInFlow/SignIn.vue";
 import Request from "./views/SignInFlow/Request.vue";
@@ -55,6 +56,14 @@ const router = new Router({
             path: "/editMovie",
             name: "editMovie",
             component: editMovie,
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path: "/viewMovie",
+            name: "viewMovie",
+            component: viewMovie,
             meta: {
                 requiresAuth: true
             }

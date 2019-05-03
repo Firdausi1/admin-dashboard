@@ -27,6 +27,7 @@ export default {
 }
 
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: $dark-blue;
   margin: 0;
   padding: 0;

@@ -194,7 +194,7 @@ export default {
   data() {
     return {
       languages: ["English", "Yoruba", "Ibo", "Hausa"],
-      ratings: ["PG-13", "R16", "R18"]
+      ratings: ["G", "PG", "PG-13", "R"]
     };
   },
   components: {

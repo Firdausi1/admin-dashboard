@@ -13,7 +13,7 @@
             <h3 ref="title">{{movie.Title}}</h3>
           </div>
           <div class="movie-poster">
-            <router-link to="/editMovie">
+            <router-link to="/viewMovie">
               <img :src="movie.imageUrl" ref="image" editable>
             </router-link>
           </div>
@@ -30,9 +30,11 @@
             class="icons"
             :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
           >
-            <a>
-              <img src="@/assets/view.svg">
-            </a>
+            <router-link to="/viewMovie">
+              <a>
+                <img src="@/assets/view.svg">
+              </a>
+            </router-link>
             <router-link to="/editMovie">
               <a>
                 <img src="@/assets/edit.svg">
