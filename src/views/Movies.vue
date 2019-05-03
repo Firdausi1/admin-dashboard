@@ -13,8 +13,8 @@
             <h3 ref="title">{{movie.Title}}</h3>
           </div>
           <div class="movie-poster">
-            <router-link to="/editMovie" >
-            <img :src="movie.imageUrl" ref="image" editable>
+            <router-link to="/editMovie">
+              <img :src="movie.imageUrl" ref="image" editable>
             </router-link>
           </div>
           <div
@@ -34,9 +34,9 @@
               <img src="@/assets/view.svg">
             </a>
             <router-link to="/editMovie">
-            <a>
-              <img src="@/assets/edit.svg">
-            </a>
+              <a>
+                <img src="@/assets/edit.svg">
+              </a>
             </router-link>
           </div>
         </div>
