@@ -88,7 +88,7 @@ export default {
 p,
 h4,
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.7rem;
   letter-spacing: 0.1rem;
@@ -124,9 +124,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 
   img {
-    width: 300px;
+    width: 200px;
     height: auto;
   }
 }
